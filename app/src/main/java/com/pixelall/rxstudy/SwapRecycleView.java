@@ -61,15 +61,6 @@ public class SwapRecycleView extends LinearLayout{
     private void initView() {
         address=new ArrayList<>();
         rootView= (LinearLayout) LayoutInflater.from(getContext()).inflate(R.layout.view_swap,this,false);
-        /*int orientation=getOrientation();
-        switch (orientation){
-            case LinearLayout.HORIZONTAL:
-                initHorizontalView();
-                break;
-            case LinearLayout.VERTICAL:
-                initVerticalView();
-                break;
-        }*/
     }
 
 
@@ -88,38 +79,17 @@ public class SwapRecycleView extends LinearLayout{
     @Override
     public void onWindowFocusChanged(boolean hasWindowFocus) {
         super.onWindowFocusChanged(hasWindowFocus);
-        if (initViewFinish) return;
+        //if (initViewFinish) return;
+        initVerticalView();
+    }
+
+    public void setLeftData(List<String> address){
+        this.address=address;
         initVerticalView();
     }
 
 
     private void initVerticalView() {
-        for (int i = 0; i < 5; i++) {
-            address.add("阿址"+i);
-        }
-
-        for (int i = 0; i < 5; i++) {
-            address.add("伯址"+i);
-        }
-
-
-        for (int i = 0; i < 6; i++) {
-            address.add("次址"+i);
-        }
-
-
-        for (int i = 0; i < 7; i++) {
-            address.add("地址"+i);
-        }
-
-
-        for (int i = 0; i < 6; i++) {
-            address.add("e址"+i);
-        }
-
-        for (int i = 0; i < 6; i++) {
-            address.add("发址"+i);
-        }
         LinearLayoutManager manager=new LinearLayoutManager(getContext());
         manager.setOrientation(LinearLayoutManager.VERTICAL);
         addressRecycle= (RecyclerView) rootView.findViewById(R.id.add_recycle);
