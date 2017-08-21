@@ -1,11 +1,14 @@
 package com.pixelall.rxstudy;
 
 import android.Manifest;
+import android.accessibilityservice.GestureDescription;
 import android.app.Activity;
+import android.app.ActivityManager;
 import android.app.LoaderManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
 import android.graphics.Camera;
 import android.hardware.camera2.CameraManager;
 import android.location.Address;
@@ -27,6 +30,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.IOException;
+import java.nio.CharBuffer;
 import java.util.List;
 import java.util.Locale;
 
@@ -143,8 +147,6 @@ public class LocationActivity extends Activity {
 //                Log.i("4", "onProviderDisabled: "+provider);
 //            }
 //        });
-
-
 
     }
 }
