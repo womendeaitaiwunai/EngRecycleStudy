@@ -6,7 +6,7 @@ package com.pixelall.rxstudy.moshi;
  */
 
 public class IODHDanLi {
-    public static IODHDanLi getIntence(){
+    public static IODHDanLi getInstance(){
         return Holder.IODHDanLi;
     }
     private static class Holder{

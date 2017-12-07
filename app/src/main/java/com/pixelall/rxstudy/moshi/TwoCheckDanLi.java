@@ -10,7 +10,7 @@ public class TwoCheckDanLi {
 
     public TwoCheckDanLi getInstance(){
         if (instance==null){
-            synchronized (this){
+            synchronized (TwoCheckDanLi.class){
                 if (instance==null){
                     instance=new TwoCheckDanLi();
                 }
